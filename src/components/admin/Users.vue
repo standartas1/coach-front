@@ -88,7 +88,7 @@ export default {
   }
 }
 .table {
-  // box-shadow: 0px 0px 12px $color-storm;
+  // box-shadow: 0px 0px 12px $color-storm; //
   font-family: $Roboto;
 }
 .tbody {
