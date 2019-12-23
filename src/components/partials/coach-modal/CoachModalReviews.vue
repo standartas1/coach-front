@@ -6,30 +6,6 @@
       @click="isOpen = !isOpen"
     >{{ !isOpen ? 'Add review' : 'Cancel' }}</button>
     <form @submit.prevent="handleSubmit" v-if="isOpen" class="modal-reviews__add-form">
-      <div class="review_form-group__radio">
-        <div class="custom-control custom-radio custom-control-inline">
-          <input
-            type="radio"
-            id="rx"
-            name="adjustments"
-            class="custom-control-input"
-            value="Rx"
-            v-model="review.adjustments"
-          />
-          <label class="custom-control-label" for="rx">Rx</label>
-        </div>
-        <div class="custom-control custom-radio custom-control-inline">
-          <input
-            type="radio"
-            id="sc"
-            name="adjustments"
-            class="custom-control-input"
-            value="Sc"
-            v-model="review.adjustments"
-          />
-          <label class="custom-control-label" for="sc">Sc</label>
-        </div>
-      </div>
       <div class="modal-reviews__form-inputs">
         <div class="modal-reviews__input-group">
           <label class="form-group__label" for="comment">Comment</label>
@@ -71,7 +47,6 @@ export default {
   data() {
     return {
       review: {
-        adjustments: "Rx",
         comment: "",
         coach: this.coach._id
       },
@@ -83,7 +58,7 @@ export default {
     ...mapActions("coaches", ["postReview"]),
     handleSubmit(e) {
       this.submitted = true;
-      if (this.review.adjustments && this.review.comment) {
+      if (this.review.comment) {
         this.postReview(this.review);
         this.isOpen = !this.isOpen;
         this.submitted = false;

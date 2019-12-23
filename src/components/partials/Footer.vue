@@ -5,7 +5,7 @@
       <i class="footer__social-media fab fa-twitter-square fa-2x"></i>
       <i class="footer__social-media fab fa-instagram fa-2x"></i>
     </div>
-    <p class="footer__copyright">Copyright &copy; 2019 WOD</p>
+    <p class="footer__copyright">Copyright &copy; 2019 Laurynas Blockis</p>
   </footer>
 </template>
 

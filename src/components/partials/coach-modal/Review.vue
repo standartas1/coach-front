@@ -11,36 +11,11 @@
           <i class="review__heading-delete fas fa-trash-alt" @click="_delete()"></i>
         </div>
       </div>
-      <p class="review__comment">Adjustments: {{ review.adjustments }}</p>
       <p class="review__comment">{{ review.comment }}</p>
     </div>
     <div class="review__edit">
       <form @submit.prevent="update" v-if="isOpen" class="review__edit-form">
         <div class>
-          <div class="form-group__radio">
-            <div class="custom-control custom-radio custom-control-inline">
-              <input
-                type="radio"
-                id="rx"
-                name="adjustments"
-                class="custom-control-input"
-                value="Rx"
-                v-model="review.adjustments"
-              />
-              <label class="custom-control-label" for="rx">Rx</label>
-            </div>
-            <div class="custom-control custom-radio custom-control-inline">
-              <input
-                type="radio"
-                id="sc"
-                name="adjustments"
-                class="custom-control-input"
-                value="Sc"
-                v-model="review.adjustments"
-              />
-              <label class="custom-control-label" for="sc">Sc</label>
-            </div>
-          </div>
           <div class>
             <label class="form-group__label" for="comment">Comment</label>
             <input
@@ -87,10 +62,9 @@ export default {
       this.submitted = true;
       const editReview = {
         _id: this.review._id,
-        adjustments: this.review.adjustments,
         comment: this.review.comment
       };
-      if (editReview.adjustments && editReview.comment) {
+      if (editReview.comment) {
         this.updateReview({ coach: this.review.coach, review: editReview });
         this.isOpen = !this.isOpen;
       }

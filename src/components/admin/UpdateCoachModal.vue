@@ -4,7 +4,7 @@
       <div v-if="this.isOpen">
         <div class="overlay" @click.self="onClick">
           <div class="my-modal">
-            <h2 class="my-modal__heading">EDIT WOD</h2>
+            <h2 class="my-modal__heading">EDIT COACH</h2>
             <form @submit.prevent="update" class="update-coach__form form-group">
               <label class="form-group__label" for="name">Name</label>
               <input

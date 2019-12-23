@@ -3,7 +3,7 @@
     <button class="coach-card__controls coach-card__controls--read-more" @click="readMore">
       <img
         class="coach-card__image card-img-top"
-        :src="'http://coaches-api.herokuapp.com/' + coach.img"
+        :src="'http://coach-api-go.herokuapp.com/' + coach.img"
         alt
       />
       <p class="coach-card__controls-text">Reviews</p>

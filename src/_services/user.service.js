@@ -2,7 +2,7 @@ import { authHeader } from '../_helpers';
 import { BehaviorSubject } from 'rxjs';
 import axios from 'axios';
 import VueJwtDecode from 'vue-jwt-decode';
-const url = 'https://coaches-api-go.herokuapp.com';
+const url = 'https://coach-api-go.herokuapp.com';
 const currentUserSubject = new BehaviorSubject(
     JSON.parse(localStorage.getItem('user'))
 );

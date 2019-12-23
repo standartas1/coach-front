@@ -1,13 +1,13 @@
 <template>
   <div class="header">
     <router-link class="brand" v-if="this.role === 'Guest'" to="/" exact>
-      <div class="brand__name">COACH</div>
+      <div class="brand__name">Improve your basketball skils</div>
     </router-link>
     <router-link class="brand" v-if="this.role === 'User'" to="/user">
-      <div class="brand__name">COACH</div>
+      <div class="brand__name">Improve your basketball skils</div>
     </router-link>
     <router-link class="brand" v-if="this.role === 'Administrator'" to="/admin">
-      <div class="brand__name">COACH</div>
+      <div class="brand__name">Improve your basketball skils</div>
     </router-link>
     <Navbar :role="role"></Navbar>
   </div>

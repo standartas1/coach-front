@@ -2,25 +2,25 @@
   <div class="coach-card card">
     <img
       class="coach-card__image card-img-top"
-      :src="'http://coaches-api.herokuapp.com/' + coach.img"
+      :src="'http://coach-api-go.herokuapp.com/' + coach.img"
       alt
     />
     <div class="coach-card__content">
       <div class="coach-card__information">
-        <p class="coach-card__label">Title</p>
-        <p class="coach-card__text">{{ coach.title }}</p>
+        <p class="coach-card__label">Name</p>
+        <p class="coach-card__text">{{ coach.name }}</p>
       </div>
       <div class="coach-card__information">
-        <p class="coach-card__label">Type</p>
-        <p class="coach-card__text">{{ coach.type }}</p>
+        <p class="coach-card__label">Surname</p>
+        <p class="coach-card__text">{{ coach.surname }}</p>
       </div>
       <div class="coach-card__information">
-        <p class="coach-card__label">Difficulty</p>
-        <p class="coach-card__text">{{ coach.difficulty }}</p>
+        <p class="coach-card__label">Skill</p>
+        <p class="coach-card__text">{{ coach.skill }}</p>
       </div>
       <div class="coach-card__information">
-        <p class="coach-card__label">Workout</p>
-        <p class="coach-card__text">{{ coach.workout }}</p>
+        <p class="coach-card__label">Experience</p>
+        <p class="coach-card__text">{{ coach.experience }}</p>
       </div>
     </div>
   </div>

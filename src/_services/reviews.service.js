@@ -1,6 +1,6 @@
 import { authHeader } from '../_helpers';
 import axios from 'axios';
-const url = 'https://coaches-api-go.herokuapp.com';
+const url = 'https://coach-api-go.herokuapp.com';
 
 export const reviewsService = {
     postReview,
